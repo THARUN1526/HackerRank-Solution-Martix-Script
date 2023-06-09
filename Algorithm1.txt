@@ -1,0 +1,18 @@
+ALGORITHM:
+
+1. Read the values of n and m from the input. These values represent the dimensions of the matrix (n rows and m columns).
+
+2. Read the matrix script from the input and store it in the 'matrix' list. The matrix script is a collection of strings, where each string represents a row of the matrix.
+
+3. Initialize an empty string variable called 'decoded_script' to store the decoded matrix script.
+
+4. Iterate over each column (j) and then each row (i) of the matrix. This nested loop allows us to traverse the matrix column-wise.
+
+5. Within the nested loop, concatenate the character at position (i, j) of the matrix to the 'decoded_script' string. This effectively transposes the matrix script.
+
+6. After the nested loops complete, we have the transposed matrix script stored in the 'decoded_script' variable.
+
+7. Use the regular expression 're.sub' function to replace symbols or spaces between two alphanumeric characters with a single space. The regular expression pattern used is `(?<=[A-Za-z0-9])[^A-Za-z0-9]+(?=[A-Za-z0-9])`, which matches any non-alphanumeric character or space between two alphanumeric characters. The `re.sub` function replaces these matches with a single space.
+
+8. Finally, print the decoded matrix script.
+
